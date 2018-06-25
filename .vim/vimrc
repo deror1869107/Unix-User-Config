@@ -76,10 +76,13 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=2
-   set shiftwidth=2
+   set softtabstop=4
+   set shiftwidth=4
 
    au FileType Makefile set noexpandtab
+   au FileType ruby set sw=2 sts=2 et
+   au FileType yaml set sw=2 sts=2 et
+   au FileType asm set sw=8 sts=8 et
 "}      							
 
 " status line {
@@ -368,6 +371,7 @@ let g:snipMateAllowMatchingDot = 0
 
 " --- vim-gitgutter
 let g:gitgutter_enabled = 1
+let g:gitgutter_max_signs = 10000
 
 " --- NerdTree Binding
 nnoremap <silent> <F6> :NERDTree<CR>
